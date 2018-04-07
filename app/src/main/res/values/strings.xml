@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TIc Tac Toe</string>
+    <string name="about_text">Tic-tac-toe (also known as noughts and crosses or Xs and Os) is a paper-and-pencil game for two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game.</string>
+    <string name="instructions">How To Play</string>
+    <string name="instructions_text"></string>
+    <string name="choose">Choose either a CROSS or a DOUGHNUT</string>
+</resources>
