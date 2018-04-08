@@ -37,7 +37,9 @@
             android:layout_height="wrap_content"
             android:text="START GAME"
             android:background="#ffffff"
-            android:padding="15dp"/>
+            android:padding="15dp"
+            android:id="@+id/start_button"
+            android:onClick="choose"/>
 
     </LinearLayout>
 
@@ -46,7 +48,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="ABOUT"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         android:layout_margin="16dp"
-        android:background="?android:attr/selectableItemBackground"/>
+        android:background="?android:attr/selectableItemBackground"
+        android:id="@+id/about_button"
+        android:onClick="aboutApp"/>
 </LinearLayout>
