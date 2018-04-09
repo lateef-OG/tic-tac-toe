@@ -16,8 +16,6 @@ public class BoardActivity extends AppCompatActivity {
 
     ImageView i1, i2, i3, i4, i5, i6, i7, i8, i9;
 
-    TextView display;
-
     String aa, bb, cc, dd, ee, ff, gg, hh, ii;
 
     List<ImageView> board = new ArrayList<>();
@@ -36,7 +34,6 @@ public class BoardActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_board);
-        display = (TextView) findViewById(R.id.display);
 
         scoreX = (TextView) findViewById(R.id.score_x);
         scoreO = (TextView) findViewById(R.id.score_0);
@@ -64,50 +61,48 @@ public class BoardActivity extends AppCompatActivity {
         i1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                if(character.equals("x")){
-                    i1.setTag(R.drawable.x);
-                    i1.setImageResource(R.drawable.x);
+                if(i1.getDrawable() == null) {
+                    if (character.equals("x")) {
+                        i1.setTag(R.drawable.x);
+                        i1.setImageResource(R.drawable.x);
 
-                    ImageView box;
+                        ImageView box;
 
-                    for(int i = 0; i < 18; i++) {
-                        int position = (int) (Math.random() * 8);
-                        if (position == 0) {
-                            position = position + 1;
+                        for (int i = 0; i < 18; i++) {
+                            int position = (int) (Math.random() * 8);
+                            if (position == 0) {
+                                position = position + 1;
+                            }
+                            box = board.get(position);
+                            if (box.getDrawable() == null) {
+                                box.setTag(R.drawable.o);
+                                box.setImageResource(R.drawable.o);
+                                break;
+                            }
                         }
-                        box = board.get(position);
-                        if (box.getDrawable() == null) {
-                            box.setTag(R.drawable.o);
-                            box.setImageResource(R.drawable.o);
-                            box.setOnClickListener(null);
-                            break;
+
+                    } else {
+                        i1.setTag(R.drawable.o);
+                        i1.setImageResource(R.drawable.o);
+
+                        ImageView box;
+
+                        for (int i = 0; i < 18; i++) {
+                            int position = (int) (Math.random() * 8);
+                            if (position == 0) {
+                                position = position + 1;
+                            }
+                            box = board.get(position);
+                            if (box.getDrawable() == null) {
+                                box.setTag(R.drawable.x);
+                                box.setImageResource(R.drawable.x);
+                                break;
+                            }
                         }
                     }
-
+                    click = click + 1;
+                    end();
                 }
-                else{
-                    i1.setTag(R.drawable.o);
-                    i1.setImageResource(R.drawable.o);
-
-                    ImageView box;
-
-                    for(int i = 0; i < 18; i++){
-                        int position = (int )(Math.random() * 8);
-                        if(position == 0){
-                            position = position + 1;
-                        }
-                        box = board.get(position);
-                        if(box.getDrawable() == null){
-                            box.setTag(R.drawable.x);
-                            box.setImageResource(R.drawable.x);
-                            box.setOnClickListener(null);
-                            break;
-                        }
-                    }
-                }
-                click = click + 1;
-                i1.setOnClickListener(null);
-                end();
             }
         });
 
@@ -115,395 +110,382 @@ public class BoardActivity extends AppCompatActivity {
         i2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                if(character.equals("x")){
-                    i2.setTag(R.drawable.x);
-                    i2.setImageResource(R.drawable.x);
+                if(i2.getDrawable() == null) {
+                    if (character.equals("x")) {
+                        i2.setTag(R.drawable.x);
+                        i2.setImageResource(R.drawable.x);
 
-                    ImageView box;
+                        ImageView box;
 
-                    for(int i = 0; i < 18; i++){
-                        int position = (int )(Math.random() * 8);
-                        if(position == 1){
-                            position = position + 1;
+                        for (int i = 0; i < 18; i++) {
+                            int position = (int) (Math.random() * 8);
+                            if (position == 1) {
+                                position = position + 1;
+                            }
+                            box = board.get(position);
+                            if (box.getDrawable() == null) {
+                                box.setTag(R.drawable.o);
+                                box.setImageResource(R.drawable.o);
+                                break;
+                            }
                         }
-                        box = board.get(position);
-                        if(box.getDrawable() == null){
-                            box.setTag(R.drawable.o);
-                            box.setImageResource(R.drawable.o);
-                            box.setOnClickListener(null);
-                            break;
+                    } else {
+                        i2.setTag(R.drawable.o);
+                        i2.setImageResource(R.drawable.o);
+
+                        ImageView box;
+
+                        for (int i = 0; i < 18; i++) {
+                            int position = (int) (Math.random() * 8);
+                            if (position == 1) {
+                                position = position + 1;
+                            }
+                            box = board.get(position);
+                            if (box.getDrawable() == null) {
+                                box.setTag(R.drawable.x);
+                                box.setImageResource(R.drawable.x);
+                                break;
+                            }
                         }
                     }
+                    click = click + 1;
+                    end();
                 }
-                else{
-                    i2.setTag(R.drawable.o);
-                    i2.setImageResource(R.drawable.o);
-
-                    ImageView box;
-
-                    for(int i = 0; i < 18; i++){
-                        int position = (int )(Math.random() * 8);
-                        if(position == 1){
-                            position = position + 1;
-                        }
-                        box = board.get(position);
-                        if(box.getDrawable() == null){
-                            box.setTag(R.drawable.x);
-                            box.setImageResource(R.drawable.x);
-                            box.setOnClickListener(null);
-                            break;
-                        }
-                    }
-                }
-                click = click + 1;
-                i2.setOnClickListener(null);
-                end();
             }
         });
 
         i3.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                if(character.equals("x")){
-                    i3.setTag(R.drawable.x);
-                    i3.setImageResource(R.drawable.x);
+                if(i3.getDrawable() == null) {
+                    if (character.equals("x")) {
+                        i3.setTag(R.drawable.x);
+                        i3.setImageResource(R.drawable.x);
 
-                    ImageView box;
+                        ImageView box;
 
-                    for(int i = 0; i < 18; i++){
-                        int position = (int )(Math.random() * 8);
-                        if(position == 2){
-                            position = position + 1;
+                        for (int i = 0; i < 18; i++) {
+                            int position = (int) (Math.random() * 8);
+                            if (position == 2) {
+                                position = position + 1;
+                            }
+                            box = board.get(position);
+                            if (box.getDrawable() == null) {
+                                box.setTag(R.drawable.o);
+                                box.setImageResource(R.drawable.o);
+                                break;
+                            }
                         }
-                        box = board.get(position);
-                        if(box.getDrawable() == null){
-                            box.setTag(R.drawable.o);
-                            box.setImageResource(R.drawable.o);
-                            box.setOnClickListener(null);
-                            break;
+                    } else {
+                        i3.setTag(R.drawable.o);
+                        i3.setImageResource(R.drawable.o);
+
+                        ImageView box;
+
+                        for (int i = 0; i < 18; i++) {
+                            int position = (int) (Math.random() * 8);
+                            if (position == 2) {
+                                position = position + 1;
+                            }
+                            box = board.get(position);
+                            if (box.getDrawable() == null) {
+                                box.setTag(R.drawable.x);
+                                box.setImageResource(R.drawable.x);
+                                break;
+                            }
                         }
                     }
+                    click = click + 1;
+                    end();
                 }
-                else{
-                    i3.setTag(R.drawable.o);
-                    i3.setImageResource(R.drawable.o);
-
-                    ImageView box;
-
-                    for(int i = 0; i < 18; i++){
-                        int position = (int )(Math.random() * 8);
-                        if(position == 2){
-                            position = position + 1;
-                        }
-                        box = board.get(position);
-                        if(box.getDrawable() == null){
-                            box.setTag(R.drawable.x);
-                            box.setImageResource(R.drawable.x);
-                            box.setOnClickListener(null);
-                            break;
-                        }
-                    }
-                }
-                click = click + 1;
-                i3.setOnClickListener(null);
-                end();
             }
         });
 
         i4.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                if(character.equals("x")){
-                    i4.setTag(R.drawable.x);
-                    i4.setImageResource(R.drawable.x);
+                if(i4.getDrawable() == null) {
+                    if (character.equals("x")) {
+                        i4.setTag(R.drawable.x);
+                        i4.setImageResource(R.drawable.x);
 
-                    ImageView box;
+                        ImageView box;
 
-                    for(int i = 0; i < 18; i++){
-                        int position = (int )(Math.random() * 8);
-                        if(position == 3){
-                            position = position + 1;
+                        for (int i = 0; i < 18; i++) {
+                            int position = (int) (Math.random() * 8);
+                            if (position == 3) {
+                                position = position + 1;
+                            }
+                            box = board.get(position);
+                            if (box.getDrawable() == null) {
+                                box.setTag(R.drawable.o);
+                                box.setImageResource(R.drawable.o);
+                                break;
+                            }
                         }
-                        box = board.get(position);
-                        if(box.getDrawable() == null){
-                            box.setTag(R.drawable.o);
-                            box.setImageResource(R.drawable.o);
-                            box.setOnClickListener(null);
-                            break;
+                    } else {
+                        i4.setTag(R.drawable.o);
+                        i4.setImageResource(R.drawable.o);
+
+                        ImageView box;
+
+                        for (int i = 0; i < 18; i++) {
+                            int position = (int) (Math.random() * 8);
+                            if (position == 3) {
+                                position = position + 1;
+                            }
+                            box = board.get(position);
+                            if (box.getDrawable() == null) {
+                                box.setTag(R.drawable.x);
+                                box.setImageResource(R.drawable.x);
+                                break;
+                            }
                         }
                     }
+                    click = click + 1;
+                    end();
                 }
-                else{
-                    i4.setTag(R.drawable.o);
-                    i4.setImageResource(R.drawable.o);
-
-                    ImageView box;
-
-                    for(int i = 0; i < 18; i++){
-                        int position = (int )(Math.random() * 8);
-                        if(position == 3){
-                            position = position + 1;
-                        }
-                        box = board.get(position);
-                        if(box.getDrawable() == null){
-                            box.setTag(R.drawable.x);
-                            box.setImageResource(R.drawable.x);
-                            box.setOnClickListener(null);
-                            break;
-                        }
-                    }
-                }
-                click = click + 1;
-                i4.setOnClickListener(null);
-                end();
             }
         });
 
         i5.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                if(character.equals("x")){
-                    i5.setTag(R.drawable.x);
-                    i5.setImageResource(R.drawable.x);
+                if(i5.getDrawable() == null) {
+                    if (character.equals("x")) {
+                        i5.setTag(R.drawable.x);
+                        i5.setImageResource(R.drawable.x);
 
-                    ImageView box;
+                        ImageView box;
 
-                    for(int i = 0; i < 18; i++){
-                        int position = (int )(Math.random() * 8);
-                        if(position == 4){
-                            position = position + 1;
+                        for (int i = 0; i < 18; i++) {
+                            int position = (int) (Math.random() * 8);
+                            if (position == 4) {
+                                position = position + 1;
+                            }
+                            box = board.get(position);
+                            if (box.getDrawable() == null) {
+                                box.setTag(R.drawable.o);
+                                box.setImageResource(R.drawable.o);
+                                break;
+                            }
                         }
-                        box = board.get(position);
-                        if(box.getDrawable() == null){
-                            box.setTag(R.drawable.o);
-                            box.setImageResource(R.drawable.o);
-                            box.setOnClickListener(null);
-                            break;
+                    } else {
+                        i5.setTag(R.drawable.o);
+                        i5.setImageResource(R.drawable.o);
+
+                        ImageView box;
+
+                        for (int i = 0; i < 18; i++) {
+                            int position = (int) (Math.random() * 8);
+                            if (position == 4) {
+                                position = position + 1;
+                            }
+                            box = board.get(position);
+                            if (box.getDrawable() == null) {
+                                box.setTag(R.drawable.x);
+                                box.setImageResource(R.drawable.x);
+                                break;
+                            }
                         }
                     }
+                    click = click + 1;
+                    end();
                 }
-                else{
-                    i5.setTag(R.drawable.o);
-                    i5.setImageResource(R.drawable.o);
-
-                    ImageView box;
-
-                    for(int i = 0; i < 18; i++){
-                        int position = (int )(Math.random() * 8);
-                        if(position == 4){
-                            position = position + 1;
-                        }
-                        box = board.get(position);
-                        if(box.getDrawable() == null){
-                            box.setTag(R.drawable.x);
-                            box.setImageResource(R.drawable.x);
-                            box.setOnClickListener(null);
-                            break;
-                        }
-                    }
-                }
-                click = click + 1;
-                i5.setOnClickListener(null);
-                end();
             }
         });
 
         i6.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                if(character.equals("x")){
-                    i6.setTag(R.drawable.x);
-                    i6.setImageResource(R.drawable.x);
+                if(i6.getDrawable() == null) {
+                    if (character.equals("x")) {
+                        i6.setTag(R.drawable.x);
+                        i6.setImageResource(R.drawable.x);
 
-                    ImageView box;
+                        ImageView box;
 
-                    for(int i = 0; i < 18; i++){
-                        int position = (int )(Math.random() * 8);
-                        if(position == 5){
-                            position = position + 1;
+                        for (int i = 0; i < 18; i++) {
+                            int position = (int) (Math.random() * 8);
+                            if (position == 5) {
+                                position = position + 1;
+                            }
+                            box = board.get(position);
+                            if (box.getDrawable() == null) {
+                                box.setTag(R.drawable.o);
+                                box.setImageResource(R.drawable.o);
+                                break;
+                            }
                         }
-                        box = board.get(position);
-                        if(box.getDrawable() == null){
-                            box.setTag(R.drawable.o);
-                            box.setImageResource(R.drawable.o);
-                            box.setOnClickListener(null);
-                            break;
+                    } else {
+                        i6.setTag(R.drawable.o);
+                        i6.setImageResource(R.drawable.o);
+
+                        ImageView box;
+
+                        for (int i = 0; i < 18; i++) {
+                            int position = (int) (Math.random() * 8);
+                            if (position == 5) {
+                                position = position + 1;
+                            }
+                            box = board.get(position);
+                            if (box.getDrawable() == null) {
+                                box.setTag(R.drawable.x);
+                                box.setImageResource(R.drawable.x);
+                                break;
+                            }
                         }
                     }
+                    click = click + 1;
+                    end();
                 }
-                else{
-                    i6.setTag(R.drawable.o);
-                    i6.setImageResource(R.drawable.o);
-
-                    ImageView box;
-
-                    for(int i = 0; i < 18; i++){
-                        int position = (int )(Math.random() * 8);
-                        if(position == 5){
-                            position = position + 1;
-                        }
-                        box = board.get(position);
-                        if(box.getDrawable() == null){
-                            box.setTag(R.drawable.x);
-                            box.setImageResource(R.drawable.x);
-                            box.setOnClickListener(null);
-                            break;
-                        }
-                    }
-                }
-                click = click + 1;
-                i6.setOnClickListener(null);
-                end();
             }
         });
 
         i7.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                if(character.equals("x")){
-                    i7.setTag(R.drawable.x);
-                    i7.setImageResource(R.drawable.x);
+                if(i7.getDrawable() == null) {
+                    if (character.equals("x")) {
+                        i7.setTag(R.drawable.x);
+                        i7.setImageResource(R.drawable.x);
 
-                    ImageView box;
+                        ImageView box;
 
-                    for(int i = 0; i < 18; i++){
-                        int position = (int )(Math.random() * 8);
-                        if(position == 6){
-                            position = position + 1;
+                        for (int i = 0; i < 18; i++) {
+                            int position = (int) (Math.random() * 8);
+                            if (position == 6) {
+                                position = position + 1;
+                            }
+                            box = board.get(position);
+                            if (box.getDrawable() == null) {
+                                box.setTag(R.drawable.o);
+                                box.setImageResource(R.drawable.o);
+                                break;
+                            }
                         }
-                        box = board.get(position);
-                        if(box.getDrawable() == null){
-                            box.setTag(R.drawable.o);
-                            box.setImageResource(R.drawable.o);
-                            box.setOnClickListener(null);
-                            break;
+                    } else {
+                        i7.setTag(R.drawable.o);
+                        i7.setImageResource(R.drawable.o);
+
+                        ImageView box;
+
+                        for (int i = 0; i < 18; i++) {
+                            int position = (int) (Math.random() * 8);
+                            if (position == 6) {
+                                position = position + 1;
+                            }
+                            box = board.get(position);
+                            if (box.getDrawable() == null) {
+                                box.setTag(R.drawable.x);
+                                box.setImageResource(R.drawable.x);
+                                break;
+                            }
                         }
                     }
+                    click = click + 1;
+                    end();
                 }
-                else{
-                    i7.setTag(R.drawable.o);
-                    i7.setImageResource(R.drawable.o);
-
-                    ImageView box;
-
-                    for(int i = 0; i < 18; i++){
-                        int position = (int )(Math.random() * 8);
-                        if(position == 6){
-                            position = position + 1;
-                        }
-                        box = board.get(position);
-                        if(box.getDrawable() == null){
-                            box.setTag(R.drawable.x);
-                            box.setImageResource(R.drawable.x);
-                            box.setOnClickListener(null);
-                            break;
-                        }
-                    }
-                }
-                click = click + 1;
-                i7.setOnClickListener(null);
-                end();
             }
         });
 
         i8.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                if(character.equals("x")){
-                    i8.setTag(R.drawable.x);
-                    i8.setImageResource(R.drawable.x);
+                if(i8.getDrawable() == null) {
+                    if (character.equals("x")) {
+                        i8.setTag(R.drawable.x);
+                        i8.setImageResource(R.drawable.x);
 
-                    ImageView box;
+                        ImageView box;
 
-                    for(int i = 0; i < 18; i++){
-                        int position = (int )(Math.random() * 8);
-                        if(position == 7){
-                            position = position + 1;
+                        for (int i = 0; i < 18; i++) {
+                            int position = (int) (Math.random() * 8);
+                            if (position == 7) {
+                                position = position + 1;
+                            }
+                            box = board.get(position);
+                            if (box.getDrawable() == null) {
+                                box.setTag(R.drawable.o);
+                                box.setImageResource(R.drawable.o);;
+                                break;
+                            }
                         }
-                        box = board.get(position);
-                        if(box.getDrawable() == null){
-                            box.setTag(R.drawable.o);
-                            box.setImageResource(R.drawable.o);
-                            box.setOnClickListener(null);
-                            break;
+                    } else {
+                        i8.setTag(R.drawable.o);
+                        i8.setImageResource(R.drawable.o);
+
+                        ImageView box;
+
+                        for (int i = 0; i < 18; i++) {
+                            int position = (int) (Math.random() * 8);
+                            if (position == 7) {
+                                position = position + 1;
+                            }
+                            box = board.get(position);
+                            if (box.getDrawable() == null) {
+                                box.setTag(R.drawable.x);
+                                box.setImageResource(R.drawable.x);
+                                break;
+                            }
                         }
                     }
+                    click = click + 1;
+                    end();
                 }
-                else{
-                    i8.setTag(R.drawable.o);
-                    i8.setImageResource(R.drawable.o);
-
-                    ImageView box;
-
-                    for(int i = 0; i < 18; i++){
-                        int position = (int )(Math.random() * 8);
-                        if(position == 7){
-                            position = position + 1;
-                        }
-                        box = board.get(position);
-                        if(box.getDrawable() == null){
-                            box.setTag(R.drawable.x);
-                            box.setImageResource(R.drawable.x);
-                            box.setOnClickListener(null);
-                            break;
-                        }
-                    }
-                }
-                click = click + 1;
-                i8.setOnClickListener(null);
-                end();
             }
         });
 
         i9.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                if(character.equals("x")){
-                    i9.setTag(R.drawable.x);
-                    i9.setImageResource(R.drawable.x);
+                if(i9.getDrawable() == null) {
+                    if (character.equals("x")) {
+                        i9.setTag(R.drawable.x);
+                        i9.setImageResource(R.drawable.x);
 
-                    ImageView box;
+                        ImageView box;
 
-                    for(int i = 0; i < 18; i++){
-                        int position = (int )(Math.random() * 8);
-                        if(position == 8){
-                            position = position - 1;
+                        for (int i = 0; i < 18; i++) {
+                            int position = (int) (Math.random() * 8);
+                            if (position == 8) {
+                                position = position - 1;
+                            }
+                            box = board.get(position);
+                            if (box.getDrawable() == null) {
+                                box.setTag(R.drawable.o);
+                                box.setImageResource(R.drawable.o);
+                                break;
+                            }
                         }
-                        box = board.get(position);
-                        if(box.getDrawable() == null){
-                            box.setTag(R.drawable.o);
-                            box.setImageResource(R.drawable.o);
-                            box.setOnClickListener(null);
-                            break;
+                    } else {
+                        i9.setTag(R.drawable.o);
+                        i9.setImageResource(R.drawable.o);
+
+                        ImageView box;
+
+                        for (int i = 0; i < 18; i++) {
+                            int position = (int) (Math.random() * 8);
+                            if (position == 8) {
+                                position = position - 1;
+                            }
+                            box = board.get(position);
+                            if (box.getDrawable() == null) {
+                                box.setTag(R.drawable.x);
+                                box.setImageResource(R.drawable.x);
+                                break;
+                            }
                         }
                     }
+                    click = click + 1;
+                    end();
                 }
-                else{
-                    i9.setTag(R.drawable.o);
-                    i9.setImageResource(R.drawable.o);
-
-                    ImageView box;
-
-                    for(int i = 0; i < 18; i++){
-                        int position = (int )(Math.random() * 8);
-                        if(position == 8){
-                            position = position - 1;
-                        }
-                        box = board.get(position);
-                        if(box.getDrawable() == null){
-                            box.setTag(R.drawable.x);
-                            box.setImageResource(R.drawable.x);
-                            box.setOnClickListener(null);
-                            break;
-                        }
-                    }
-                }
-                click = click + 1;
-                i9.setOnClickListener(null);
-                end();
             }
         });
     }
+
+    int x;
+    int o;
 
     public void end(){
         aa = String.valueOf(i1.getTag());
@@ -518,13 +500,12 @@ public class BoardActivity extends AppCompatActivity {
         hh = String.valueOf(i8.getTag());
         ii = String.valueOf(i9.getTag());
 
-        display.setText(bb);
-
         if(aa.equals("2131099751") && bb.equals("2131099751") && cc.equals("2131099751")){
 //            display.setText("X WON!");
             Toast.makeText(BoardActivity.this, "X won this round!",
                     Toast.LENGTH_LONG).show();
-            x_score = x_score + 1;
+            x = 1;
+            x_score = x_score + x;
             String score = Integer.toString(x_score);
             scoreX.setText(score);
         }
@@ -533,7 +514,8 @@ public class BoardActivity extends AppCompatActivity {
             //display.setText("O WON!");
             Toast.makeText(BoardActivity.this, "O won this round!",
                     Toast.LENGTH_LONG).show();
-            o_score = o_score + 1;
+            o = 1;
+            o_score = o_score + o;
             String score = Integer.toString(o_score);
             scoreO.setText(score);
         }
@@ -542,7 +524,8 @@ public class BoardActivity extends AppCompatActivity {
 //            display.setText("X WON!");
             Toast.makeText(BoardActivity.this, "X won this round!",
                     Toast.LENGTH_LONG).show();
-            x_score = x_score + 1;
+            x = 1;
+            x_score = x_score + x;
             String score = Integer.toString(x_score);
             scoreX.setText(score);
         }
@@ -551,7 +534,8 @@ public class BoardActivity extends AppCompatActivity {
 //            display.setText("O WON!");
             Toast.makeText(BoardActivity.this, "O won this round!",
                     Toast.LENGTH_LONG).show();
-            o_score = o_score + 1;
+            o = 1;
+            o_score = o_score + o;
             String score = Integer.toString(o_score);
             scoreO.setText(score);
         }
@@ -560,7 +544,8 @@ public class BoardActivity extends AppCompatActivity {
             //display.setText("X WON!");
             Toast.makeText(BoardActivity.this, "X won this round!",
                     Toast.LENGTH_LONG).show();
-            x_score = x_score + 1;
+            x = 1;
+            x_score = x_score + x;
             String score = Integer.toString(x_score);
             scoreX.setText(score);
         }
@@ -569,7 +554,8 @@ public class BoardActivity extends AppCompatActivity {
             //display.setText("O WON!");
             Toast.makeText(BoardActivity.this, "O won this round!",
                     Toast.LENGTH_LONG).show();
-            o_score = o_score + 1;
+            o = 1;
+            o_score = o_score + o;
             String score = Integer.toString(o_score);
             scoreO.setText(score);
         }
@@ -578,7 +564,8 @@ public class BoardActivity extends AppCompatActivity {
             //display.setText("X WON!");
             Toast.makeText(BoardActivity.this, "X won this round!",
                     Toast.LENGTH_LONG).show();
-            x_score = x_score + 1;
+            x = 1;
+            x_score = x_score + x;
             String score = Integer.toString(x_score);
             scoreX.setText(score);
         }
@@ -587,7 +574,8 @@ public class BoardActivity extends AppCompatActivity {
             //display.setText("O WON!");
             Toast.makeText(BoardActivity.this, "O won this round!",
                     Toast.LENGTH_LONG).show();
-            o_score = o_score + 1;
+            o = 1;
+            o_score = o_score + o;
             String score = Integer.toString(o_score);
             scoreO.setText(score);
         }
@@ -596,7 +584,8 @@ public class BoardActivity extends AppCompatActivity {
             //display.setText("X WON!");
             Toast.makeText(BoardActivity.this, "X won this round!",
                     Toast.LENGTH_LONG).show();
-            x_score = x_score + 1;
+            x = 1;
+            x_score = x_score + x;
             String score = Integer.toString(x_score);
             scoreX.setText(score);
         }
@@ -605,7 +594,8 @@ public class BoardActivity extends AppCompatActivity {
             //display.setText("O WON!");
             Toast.makeText(BoardActivity.this, "O won this round!",
                     Toast.LENGTH_LONG).show();
-            o_score = o_score + 1;
+            o = 1;
+            o_score = o_score + o;
             String score = Integer.toString(o_score);
             scoreO.setText(score);
         }
@@ -614,7 +604,8 @@ public class BoardActivity extends AppCompatActivity {
             //display.setText("X WON!");
             Toast.makeText(BoardActivity.this, "X won this round!",
                     Toast.LENGTH_LONG).show();
-            x_score = x_score + 1;
+            x = 1;
+            x_score = x_score + x;
             String score = Integer.toString(x_score);
             scoreX.setText(score);
         }
@@ -623,7 +614,8 @@ public class BoardActivity extends AppCompatActivity {
             //display.setText("O WON!");
             Toast.makeText(BoardActivity.this, "O won this round!",
                     Toast.LENGTH_LONG).show();
-            o_score = o_score + 1;
+            o = 1;
+            o_score = o_score + o;
             String score = Integer.toString(o_score);
             scoreO.setText(score);
         }
@@ -632,7 +624,8 @@ public class BoardActivity extends AppCompatActivity {
             //display.setText("X WON!");
             Toast.makeText(BoardActivity.this, "X won this round!",
                     Toast.LENGTH_LONG).show();
-            x_score = x_score + 1;
+            x = 1;
+            x_score = x_score + x;
             String score = Integer.toString(x_score);
             scoreX.setText(score);
         }
@@ -641,7 +634,8 @@ public class BoardActivity extends AppCompatActivity {
             //display.setText("O WON!");
             Toast.makeText(BoardActivity.this, "O won this round!",
                     Toast.LENGTH_LONG).show();
-            o_score = o_score + 1;
+            o = 1;
+            o_score = o_score + o;
             String score = Integer.toString(o_score);
             scoreO.setText(score);
         }
@@ -650,7 +644,8 @@ public class BoardActivity extends AppCompatActivity {
             //display.setText("X WON!");
             Toast.makeText(BoardActivity.this, "X won this round!",
                     Toast.LENGTH_LONG).show();
-            x_score = x_score + 1;
+            x = 1;
+            x_score = x_score + x;
             String score = Integer.toString(x_score);
             scoreX.setText(score);
         }
@@ -659,9 +654,19 @@ public class BoardActivity extends AppCompatActivity {
             //display.setText("O WON!");
             Toast.makeText(BoardActivity.this, "O won this round!",
                     Toast.LENGTH_LONG).show();
-            o_score = o_score + 1;
+            o = 1;
+            o_score = o_score + o;
             String score = Integer.toString(o_score);
             scoreO.setText(score);
+        }
+    }
+
+    public void resetBoard(View view){
+        for(int i = 0; i < 9; i++){
+            ImageView box = board.get(i);
+            box.setImageDrawable(null);
+            x = 0;
+            o = 0;
         }
     }
 
