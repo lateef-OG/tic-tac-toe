@@ -14,6 +14,8 @@ public class BoardActivity extends AppCompatActivity {
 
     ImageView i1, i2, i3, i4, i5, i6, i7, i8, i9;
 
+    String aa, bb, cc, dd, ee, ff, gg, hh, ii;
+
     List<ImageView> board = new ArrayList<>();
 
     int click = 0;
@@ -47,6 +49,7 @@ public class BoardActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 if(character.equals("x")){
+                    i1.setTag(R.drawable.x);
                     i1.setImageResource(R.drawable.x);
 
                     ImageView box;
@@ -58,6 +61,7 @@ public class BoardActivity extends AppCompatActivity {
                         }
                         box = board.get(position);
                         if(box.getDrawable() == null){
+                            box.setTag(R.drawable.o);
                             box.setImageResource(R.drawable.o);
                             break;
                         }
@@ -65,6 +69,7 @@ public class BoardActivity extends AppCompatActivity {
 
                 }
                 else{
+                    i1.setTag(R.drawable.o);
                     i1.setImageResource(R.drawable.o);
 
                     ImageView box;
@@ -76,6 +81,7 @@ public class BoardActivity extends AppCompatActivity {
                         }
                         box = board.get(position);
                         if(box.getDrawable() == null){
+                            box.setTag(R.drawable.x);
                             box.setImageResource(R.drawable.x);
                             break;
                         }
@@ -91,6 +97,7 @@ public class BoardActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 if(character.equals("x")){
+                    i2.setTag(R.drawable.x);
                     i2.setImageResource(R.drawable.x);
 
                     ImageView box;
@@ -102,6 +109,7 @@ public class BoardActivity extends AppCompatActivity {
                         }
                         box = board.get(position);
                         if(box.getDrawable() == null){
+                            box.setTag(R.drawable.o);
                             box.setImageResource(R.drawable.o);
                             break;
                         }
@@ -109,6 +117,7 @@ public class BoardActivity extends AppCompatActivity {
 
                 }
                 else{
+                    i2.setTag(R.drawable.o);
                     i2.setImageResource(R.drawable.o);
 
                     ImageView box;
@@ -120,6 +129,7 @@ public class BoardActivity extends AppCompatActivity {
                         }
                         box = board.get(position);
                         if(box.getDrawable() == null){
+                            box.setTag(R.drawable.x);
                             box.setImageResource(R.drawable.x);
                             break;
                         }
@@ -134,6 +144,7 @@ public class BoardActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 if(character.equals("x")){
+                    i3.setTag(R.drawable.x);
                     i3.setImageResource(R.drawable.x);
 
                     ImageView box;
@@ -145,6 +156,7 @@ public class BoardActivity extends AppCompatActivity {
                         }
                         box = board.get(position);
                         if(box.getDrawable() == null){
+                            box.setTag(R.drawable.o);
                             box.setImageResource(R.drawable.o);
                             break;
                         }
@@ -152,6 +164,7 @@ public class BoardActivity extends AppCompatActivity {
 
                 }
                 else{
+                    i3.setTag(R.drawable.o);
                     i3.setImageResource(R.drawable.o);
 
                     ImageView box;
@@ -163,6 +176,7 @@ public class BoardActivity extends AppCompatActivity {
                         }
                         box = board.get(position);
                         if(box.getDrawable() == null){
+                            box.setTag(R.drawable.x);
                             box.setImageResource(R.drawable.x);
                             break;
                         }
@@ -177,6 +191,7 @@ public class BoardActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 if(character.equals("x")){
+                    i4.setTag(R.drawable.x);
                     i4.setImageResource(R.drawable.x);
 
                     ImageView box;
@@ -188,6 +203,7 @@ public class BoardActivity extends AppCompatActivity {
                         }
                         box = board.get(position);
                         if(box.getDrawable() == null){
+                            box.setTag(R.drawable.o);
                             box.setImageResource(R.drawable.o);
                             break;
                         }
@@ -195,6 +211,7 @@ public class BoardActivity extends AppCompatActivity {
 
                 }
                 else{
+                    i4.setTag(R.drawable.o);
                     i4.setImageResource(R.drawable.o);
 
                     ImageView box;
@@ -206,6 +223,7 @@ public class BoardActivity extends AppCompatActivity {
                         }
                         box = board.get(position);
                         if(box.getDrawable() == null){
+                            box.setTag(R.drawable.x);
                             box.setImageResource(R.drawable.x);
                             break;
                         }
@@ -220,6 +238,7 @@ public class BoardActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 if(character.equals("x")){
+                    i5.setTag(R.drawable.x);
                     i5.setImageResource(R.drawable.x);
 
                     ImageView box;
@@ -231,6 +250,7 @@ public class BoardActivity extends AppCompatActivity {
                         }
                         box = board.get(position);
                         if(box.getDrawable() == null){
+                            box.setTag(R.drawable.o);
                             box.setImageResource(R.drawable.o);
                             break;
                         }
@@ -238,6 +258,7 @@ public class BoardActivity extends AppCompatActivity {
 
                 }
                 else{
+                    i5.setTag(R.drawable.o);
                     i5.setImageResource(R.drawable.o);
 
                     ImageView box;
@@ -249,6 +270,7 @@ public class BoardActivity extends AppCompatActivity {
                         }
                         box = board.get(position);
                         if(box.getDrawable() == null){
+                            box.setTag(R.drawable.x);
                             box.setImageResource(R.drawable.x);
                             break;
                         }
@@ -263,6 +285,7 @@ public class BoardActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 if(character.equals("x")){
+                    i6.setTag(R.drawable.x);
                     i6.setImageResource(R.drawable.x);
 
                     ImageView box;
@@ -274,6 +297,7 @@ public class BoardActivity extends AppCompatActivity {
                         }
                         box = board.get(position);
                         if(box.getDrawable() == null){
+                            box.setTag(R.drawable.o);
                             box.setImageResource(R.drawable.o);
                             break;
                         }
@@ -281,6 +305,7 @@ public class BoardActivity extends AppCompatActivity {
 
                 }
                 else{
+                    i6.setTag(R.drawable.o);
                     i6.setImageResource(R.drawable.o);
 
                     ImageView box;
@@ -292,6 +317,7 @@ public class BoardActivity extends AppCompatActivity {
                         }
                         box = board.get(position);
                         if(box.getDrawable() == null){
+                            box.setTag(R.drawable.x);
                             box.setImageResource(R.drawable.x);
                             break;
                         }
@@ -306,6 +332,7 @@ public class BoardActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 if(character.equals("x")){
+                    i7.setTag(R.drawable.x);
                     i7.setImageResource(R.drawable.x);
 
                     ImageView box;
@@ -317,6 +344,7 @@ public class BoardActivity extends AppCompatActivity {
                         }
                         box = board.get(position);
                         if(box.getDrawable() == null){
+                            box.setTag(R.drawable.o);
                             box.setImageResource(R.drawable.o);
                             break;
                         }
@@ -324,6 +352,7 @@ public class BoardActivity extends AppCompatActivity {
 
                 }
                 else{
+                    i7.setTag(R.drawable.o);
                     i7.setImageResource(R.drawable.o);
 
                     ImageView box;
@@ -335,6 +364,7 @@ public class BoardActivity extends AppCompatActivity {
                         }
                         box = board.get(position);
                         if(box.getDrawable() == null){
+                            box.setTag(R.drawable.x);
                             box.setImageResource(R.drawable.x);
                             break;
                         }
@@ -349,6 +379,7 @@ public class BoardActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 if(character.equals("x")){
+                    i8.setTag(R.drawable.x);
                     i8.setImageResource(R.drawable.x);
 
                     ImageView box;
@@ -360,6 +391,7 @@ public class BoardActivity extends AppCompatActivity {
                         }
                         box = board.get(position);
                         if(box.getDrawable() == null){
+                            box.setTag(R.drawable.o);
                             box.setImageResource(R.drawable.o);
                             break;
                         }
@@ -367,6 +399,7 @@ public class BoardActivity extends AppCompatActivity {
 
                 }
                 else{
+                    i8.setTag(R.drawable.o);
                     i8.setImageResource(R.drawable.o);
 
                     ImageView box;
@@ -378,6 +411,7 @@ public class BoardActivity extends AppCompatActivity {
                         }
                         box = board.get(position);
                         if(box.getDrawable() == null){
+                            box.setTag(R.drawable.x);
                             box.setImageResource(R.drawable.x);
                             break;
                         }
@@ -392,6 +426,7 @@ public class BoardActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 if(character.equals("x")){
+                    i9.setTag(R.drawable.x);
                     i9.setImageResource(R.drawable.x);
 
                     ImageView box;
@@ -403,6 +438,7 @@ public class BoardActivity extends AppCompatActivity {
                         }
                         box = board.get(position);
                         if(box.getDrawable() == null){
+                            box.setTag(R.drawable.o);
                             box.setImageResource(R.drawable.o);
                             break;
                         }
@@ -410,6 +446,7 @@ public class BoardActivity extends AppCompatActivity {
 
                 }
                 else{
+                    i9.setTag(R.drawable.o);
                     i9.setImageResource(R.drawable.o);
 
                     ImageView box;
@@ -421,6 +458,7 @@ public class BoardActivity extends AppCompatActivity {
                         }
                         box = board.get(position);
                         if(box.getDrawable() == null){
+                            box.setTag(R.drawable.x);
                             box.setImageResource(R.drawable.x);
                             break;
                         }
@@ -433,6 +471,15 @@ public class BoardActivity extends AppCompatActivity {
     }
 
     public void end(){
-
+        aa = String.valueOf(i1.getTag());
+        bb = String.valueOf(i2.getTag());
+        cc = String.valueOf(i3.getTag());
+        dd = String.valueOf(i4.getTag());
+        ee = String.valueOf(i5.getTag());
+        ff = String.valueOf(i6.getTag());
+        gg = String.valueOf(i7.getTag());
+        hh = String.valueOf(i8.getTag());
+        ii = String.valueOf(i9.getTag());
     }
+
 }
