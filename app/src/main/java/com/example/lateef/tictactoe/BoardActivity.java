@@ -484,9 +484,6 @@ public class BoardActivity extends AppCompatActivity {
         });
     }
 
-    int x;
-    int o;
-
     public void end(){
         aa = String.valueOf(i1.getTag());
         bb = String.valueOf(i2.getTag());
@@ -504,8 +501,7 @@ public class BoardActivity extends AppCompatActivity {
 //            display.setText("X WON!");
             Toast.makeText(BoardActivity.this, "X won this round!",
                     Toast.LENGTH_LONG).show();
-            x = 1;
-            x_score = x_score + x;
+            x_score = x_score + 1;
             String score = Integer.toString(x_score);
             scoreX.setText(score);
         }
@@ -514,8 +510,7 @@ public class BoardActivity extends AppCompatActivity {
             //display.setText("O WON!");
             Toast.makeText(BoardActivity.this, "O won this round!",
                     Toast.LENGTH_LONG).show();
-            o = 1;
-            o_score = o_score + o;
+            o_score = o_score + 1;
             String score = Integer.toString(o_score);
             scoreO.setText(score);
         }
@@ -524,8 +519,7 @@ public class BoardActivity extends AppCompatActivity {
 //            display.setText("X WON!");
             Toast.makeText(BoardActivity.this, "X won this round!",
                     Toast.LENGTH_LONG).show();
-            x = 1;
-            x_score = x_score + x;
+            x_score = x_score + 1;
             String score = Integer.toString(x_score);
             scoreX.setText(score);
         }
@@ -534,8 +528,7 @@ public class BoardActivity extends AppCompatActivity {
 //            display.setText("O WON!");
             Toast.makeText(BoardActivity.this, "O won this round!",
                     Toast.LENGTH_LONG).show();
-            o = 1;
-            o_score = o_score + o;
+            o_score = o_score + 1;
             String score = Integer.toString(o_score);
             scoreO.setText(score);
         }
@@ -544,8 +537,7 @@ public class BoardActivity extends AppCompatActivity {
             //display.setText("X WON!");
             Toast.makeText(BoardActivity.this, "X won this round!",
                     Toast.LENGTH_LONG).show();
-            x = 1;
-            x_score = x_score + x;
+            x_score = x_score + 1;
             String score = Integer.toString(x_score);
             scoreX.setText(score);
         }
@@ -554,8 +546,7 @@ public class BoardActivity extends AppCompatActivity {
             //display.setText("O WON!");
             Toast.makeText(BoardActivity.this, "O won this round!",
                     Toast.LENGTH_LONG).show();
-            o = 1;
-            o_score = o_score + o;
+            o_score = o_score + 1;
             String score = Integer.toString(o_score);
             scoreO.setText(score);
         }
@@ -564,8 +555,7 @@ public class BoardActivity extends AppCompatActivity {
             //display.setText("X WON!");
             Toast.makeText(BoardActivity.this, "X won this round!",
                     Toast.LENGTH_LONG).show();
-            x = 1;
-            x_score = x_score + x;
+            x_score = x_score + 1;
             String score = Integer.toString(x_score);
             scoreX.setText(score);
         }
@@ -574,8 +564,7 @@ public class BoardActivity extends AppCompatActivity {
             //display.setText("O WON!");
             Toast.makeText(BoardActivity.this, "O won this round!",
                     Toast.LENGTH_LONG).show();
-            o = 1;
-            o_score = o_score + o;
+            o_score = o_score + 1;
             String score = Integer.toString(o_score);
             scoreO.setText(score);
         }
@@ -584,8 +573,7 @@ public class BoardActivity extends AppCompatActivity {
             //display.setText("X WON!");
             Toast.makeText(BoardActivity.this, "X won this round!",
                     Toast.LENGTH_LONG).show();
-            x = 1;
-            x_score = x_score + x;
+            x_score = x_score + 1;
             String score = Integer.toString(x_score);
             scoreX.setText(score);
         }
@@ -594,8 +582,7 @@ public class BoardActivity extends AppCompatActivity {
             //display.setText("O WON!");
             Toast.makeText(BoardActivity.this, "O won this round!",
                     Toast.LENGTH_LONG).show();
-            o = 1;
-            o_score = o_score + o;
+            o_score = o_score + 1;
             String score = Integer.toString(o_score);
             scoreO.setText(score);
         }
@@ -604,8 +591,7 @@ public class BoardActivity extends AppCompatActivity {
             //display.setText("X WON!");
             Toast.makeText(BoardActivity.this, "X won this round!",
                     Toast.LENGTH_LONG).show();
-            x = 1;
-            x_score = x_score + x;
+            x_score = x_score + 1;
             String score = Integer.toString(x_score);
             scoreX.setText(score);
         }
@@ -614,8 +600,7 @@ public class BoardActivity extends AppCompatActivity {
             //display.setText("O WON!");
             Toast.makeText(BoardActivity.this, "O won this round!",
                     Toast.LENGTH_LONG).show();
-            o = 1;
-            o_score = o_score + o;
+            o_score = o_score + 1;
             String score = Integer.toString(o_score);
             scoreO.setText(score);
         }
@@ -624,8 +609,7 @@ public class BoardActivity extends AppCompatActivity {
             //display.setText("X WON!");
             Toast.makeText(BoardActivity.this, "X won this round!",
                     Toast.LENGTH_LONG).show();
-            x = 1;
-            x_score = x_score + x;
+            x_score = x_score + 1;
             String score = Integer.toString(x_score);
             scoreX.setText(score);
         }
@@ -634,8 +618,7 @@ public class BoardActivity extends AppCompatActivity {
             //display.setText("O WON!");
             Toast.makeText(BoardActivity.this, "O won this round!",
                     Toast.LENGTH_LONG).show();
-            o = 1;
-            o_score = o_score + o;
+            o_score = o_score + 1;
             String score = Integer.toString(o_score);
             scoreO.setText(score);
         }
@@ -644,8 +627,7 @@ public class BoardActivity extends AppCompatActivity {
             //display.setText("X WON!");
             Toast.makeText(BoardActivity.this, "X won this round!",
                     Toast.LENGTH_LONG).show();
-            x = 1;
-            x_score = x_score + x;
+            x_score = x_score + 1;
             String score = Integer.toString(x_score);
             scoreX.setText(score);
         }
@@ -654,8 +636,7 @@ public class BoardActivity extends AppCompatActivity {
             //display.setText("O WON!");
             Toast.makeText(BoardActivity.this, "O won this round!",
                     Toast.LENGTH_LONG).show();
-            o = 1;
-            o_score = o_score + o;
+            o_score = o_score + 1;
             String score = Integer.toString(o_score);
             scoreO.setText(score);
         }
@@ -665,8 +646,7 @@ public class BoardActivity extends AppCompatActivity {
         for(int i = 0; i < 9; i++){
             ImageView box = board.get(i);
             box.setImageDrawable(null);
-            x = 0;
-            o = 0;
+            box.setTag(null);
         }
     }
 
