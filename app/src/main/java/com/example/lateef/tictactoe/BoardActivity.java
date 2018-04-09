@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,16 +16,30 @@ public class BoardActivity extends AppCompatActivity {
 
     ImageView i1, i2, i3, i4, i5, i6, i7, i8, i9;
 
+    TextView display;
+
     String aa, bb, cc, dd, ee, ff, gg, hh, ii;
 
     List<ImageView> board = new ArrayList<>();
 
     int click = 0;
 
+    int x_score = 0;
+    int o_score = 0;
+
+    TextView scoreX;
+    TextView scoreO;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_board);
+        display = (TextView) findViewById(R.id.display);
+
+        scoreX = (TextView) findViewById(R.id.score_x);
+        scoreO = (TextView) findViewById(R.id.score_0);
 
         i1 = (ImageView) findViewById(R.id.box_1);
         i2 = (ImageView) findViewById(R.id.box_2);
@@ -54,15 +70,16 @@ public class BoardActivity extends AppCompatActivity {
 
                     ImageView box;
 
-                    for(int i = 0; i < 18; i++){
-                        int position = (int )(Math.random() * 8);
-                        if(position == 0){
+                    for(int i = 0; i < 18; i++) {
+                        int position = (int) (Math.random() * 8);
+                        if (position == 0) {
                             position = position + 1;
                         }
                         box = board.get(position);
-                        if(box.getDrawable() == null){
+                        if (box.getDrawable() == null) {
                             box.setTag(R.drawable.o);
                             box.setImageResource(R.drawable.o);
+                            box.setOnClickListener(null);
                             break;
                         }
                     }
@@ -83,12 +100,14 @@ public class BoardActivity extends AppCompatActivity {
                         if(box.getDrawable() == null){
                             box.setTag(R.drawable.x);
                             box.setImageResource(R.drawable.x);
+                            box.setOnClickListener(null);
                             break;
                         }
                     }
                 }
                 click = click + 1;
                 i1.setOnClickListener(null);
+                end();
             }
         });
 
@@ -111,10 +130,10 @@ public class BoardActivity extends AppCompatActivity {
                         if(box.getDrawable() == null){
                             box.setTag(R.drawable.o);
                             box.setImageResource(R.drawable.o);
+                            box.setOnClickListener(null);
                             break;
                         }
                     }
-
                 }
                 else{
                     i2.setTag(R.drawable.o);
@@ -131,12 +150,14 @@ public class BoardActivity extends AppCompatActivity {
                         if(box.getDrawable() == null){
                             box.setTag(R.drawable.x);
                             box.setImageResource(R.drawable.x);
+                            box.setOnClickListener(null);
                             break;
                         }
                     }
                 }
                 click = click + 1;
                 i2.setOnClickListener(null);
+                end();
             }
         });
 
@@ -158,10 +179,10 @@ public class BoardActivity extends AppCompatActivity {
                         if(box.getDrawable() == null){
                             box.setTag(R.drawable.o);
                             box.setImageResource(R.drawable.o);
+                            box.setOnClickListener(null);
                             break;
                         }
                     }
-
                 }
                 else{
                     i3.setTag(R.drawable.o);
@@ -178,12 +199,14 @@ public class BoardActivity extends AppCompatActivity {
                         if(box.getDrawable() == null){
                             box.setTag(R.drawable.x);
                             box.setImageResource(R.drawable.x);
+                            box.setOnClickListener(null);
                             break;
                         }
                     }
                 }
                 click = click + 1;
                 i3.setOnClickListener(null);
+                end();
             }
         });
 
@@ -205,10 +228,10 @@ public class BoardActivity extends AppCompatActivity {
                         if(box.getDrawable() == null){
                             box.setTag(R.drawable.o);
                             box.setImageResource(R.drawable.o);
+                            box.setOnClickListener(null);
                             break;
                         }
                     }
-
                 }
                 else{
                     i4.setTag(R.drawable.o);
@@ -225,12 +248,14 @@ public class BoardActivity extends AppCompatActivity {
                         if(box.getDrawable() == null){
                             box.setTag(R.drawable.x);
                             box.setImageResource(R.drawable.x);
+                            box.setOnClickListener(null);
                             break;
                         }
                     }
                 }
                 click = click + 1;
                 i4.setOnClickListener(null);
+                end();
             }
         });
 
@@ -252,10 +277,10 @@ public class BoardActivity extends AppCompatActivity {
                         if(box.getDrawable() == null){
                             box.setTag(R.drawable.o);
                             box.setImageResource(R.drawable.o);
+                            box.setOnClickListener(null);
                             break;
                         }
                     }
-
                 }
                 else{
                     i5.setTag(R.drawable.o);
@@ -272,12 +297,14 @@ public class BoardActivity extends AppCompatActivity {
                         if(box.getDrawable() == null){
                             box.setTag(R.drawable.x);
                             box.setImageResource(R.drawable.x);
+                            box.setOnClickListener(null);
                             break;
                         }
                     }
                 }
                 click = click + 1;
                 i5.setOnClickListener(null);
+                end();
             }
         });
 
@@ -299,10 +326,10 @@ public class BoardActivity extends AppCompatActivity {
                         if(box.getDrawable() == null){
                             box.setTag(R.drawable.o);
                             box.setImageResource(R.drawable.o);
+                            box.setOnClickListener(null);
                             break;
                         }
                     }
-
                 }
                 else{
                     i6.setTag(R.drawable.o);
@@ -319,12 +346,14 @@ public class BoardActivity extends AppCompatActivity {
                         if(box.getDrawable() == null){
                             box.setTag(R.drawable.x);
                             box.setImageResource(R.drawable.x);
+                            box.setOnClickListener(null);
                             break;
                         }
                     }
                 }
                 click = click + 1;
                 i6.setOnClickListener(null);
+                end();
             }
         });
 
@@ -346,10 +375,10 @@ public class BoardActivity extends AppCompatActivity {
                         if(box.getDrawable() == null){
                             box.setTag(R.drawable.o);
                             box.setImageResource(R.drawable.o);
+                            box.setOnClickListener(null);
                             break;
                         }
                     }
-
                 }
                 else{
                     i7.setTag(R.drawable.o);
@@ -366,12 +395,14 @@ public class BoardActivity extends AppCompatActivity {
                         if(box.getDrawable() == null){
                             box.setTag(R.drawable.x);
                             box.setImageResource(R.drawable.x);
+                            box.setOnClickListener(null);
                             break;
                         }
                     }
                 }
                 click = click + 1;
                 i7.setOnClickListener(null);
+                end();
             }
         });
 
@@ -393,10 +424,10 @@ public class BoardActivity extends AppCompatActivity {
                         if(box.getDrawable() == null){
                             box.setTag(R.drawable.o);
                             box.setImageResource(R.drawable.o);
+                            box.setOnClickListener(null);
                             break;
                         }
                     }
-
                 }
                 else{
                     i8.setTag(R.drawable.o);
@@ -413,12 +444,14 @@ public class BoardActivity extends AppCompatActivity {
                         if(box.getDrawable() == null){
                             box.setTag(R.drawable.x);
                             box.setImageResource(R.drawable.x);
+                            box.setOnClickListener(null);
                             break;
                         }
                     }
                 }
                 click = click + 1;
                 i8.setOnClickListener(null);
+                end();
             }
         });
 
@@ -440,10 +473,10 @@ public class BoardActivity extends AppCompatActivity {
                         if(box.getDrawable() == null){
                             box.setTag(R.drawable.o);
                             box.setImageResource(R.drawable.o);
+                            box.setOnClickListener(null);
                             break;
                         }
                     }
-
                 }
                 else{
                     i9.setTag(R.drawable.o);
@@ -460,12 +493,14 @@ public class BoardActivity extends AppCompatActivity {
                         if(box.getDrawable() == null){
                             box.setTag(R.drawable.x);
                             box.setImageResource(R.drawable.x);
+                            box.setOnClickListener(null);
                             break;
                         }
                     }
                 }
                 click = click + 1;
                 i9.setOnClickListener(null);
+                end();
             }
         });
     }
@@ -474,12 +509,160 @@ public class BoardActivity extends AppCompatActivity {
         aa = String.valueOf(i1.getTag());
         bb = String.valueOf(i2.getTag());
         cc = String.valueOf(i3.getTag());
+
         dd = String.valueOf(i4.getTag());
         ee = String.valueOf(i5.getTag());
         ff = String.valueOf(i6.getTag());
+
         gg = String.valueOf(i7.getTag());
         hh = String.valueOf(i8.getTag());
         ii = String.valueOf(i9.getTag());
+
+        display.setText(bb);
+
+        if(aa.equals("2131099751") && bb.equals("2131099751") && cc.equals("2131099751")){
+//            display.setText("X WON!");
+            Toast.makeText(BoardActivity.this, "X won this round!",
+                    Toast.LENGTH_LONG).show();
+            x_score = x_score + 1;
+            String score = Integer.toString(x_score);
+            scoreX.setText(score);
+        }
+
+        if(aa.equals("2131099747") && bb.equals("2131099747") && cc.equals("2131099747")){
+            //display.setText("O WON!");
+            Toast.makeText(BoardActivity.this, "O won this round!",
+                    Toast.LENGTH_LONG).show();
+            o_score = o_score + 1;
+            String score = Integer.toString(o_score);
+            scoreO.setText(score);
+        }
+
+        if(dd.equals("2131099751") && ee.equals("2131099751") && ff.equals("2131099751")){
+//            display.setText("X WON!");
+            Toast.makeText(BoardActivity.this, "X won this round!",
+                    Toast.LENGTH_LONG).show();
+            x_score = x_score + 1;
+            String score = Integer.toString(x_score);
+            scoreX.setText(score);
+        }
+
+        if(dd.equals("2131099747") && ee.equals("2131099747") && ff.equals("2131099747")){
+//            display.setText("O WON!");
+            Toast.makeText(BoardActivity.this, "O won this round!",
+                    Toast.LENGTH_LONG).show();
+            o_score = o_score + 1;
+            String score = Integer.toString(o_score);
+            scoreO.setText(score);
+        }
+
+        if(gg.equals("2131099751") && hh.equals("2131099751") && ii.equals("2131099751")){
+            //display.setText("X WON!");
+            Toast.makeText(BoardActivity.this, "X won this round!",
+                    Toast.LENGTH_LONG).show();
+            x_score = x_score + 1;
+            String score = Integer.toString(x_score);
+            scoreX.setText(score);
+        }
+
+        if(gg.equals("2131099747") && hh.equals("2131099747") && ii.equals("2131099747")){
+            //display.setText("O WON!");
+            Toast.makeText(BoardActivity.this, "O won this round!",
+                    Toast.LENGTH_LONG).show();
+            o_score = o_score + 1;
+            String score = Integer.toString(o_score);
+            scoreO.setText(score);
+        }
+
+        if(aa.equals("2131099751") && dd.equals("2131099751") && gg.equals("2131099751")){
+            //display.setText("X WON!");
+            Toast.makeText(BoardActivity.this, "X won this round!",
+                    Toast.LENGTH_LONG).show();
+            x_score = x_score + 1;
+            String score = Integer.toString(x_score);
+            scoreX.setText(score);
+        }
+
+        if(aa.equals("2131099747") && dd.equals("2131099747") && gg.equals("2131099747")){
+            //display.setText("O WON!");
+            Toast.makeText(BoardActivity.this, "O won this round!",
+                    Toast.LENGTH_LONG).show();
+            o_score = o_score + 1;
+            String score = Integer.toString(o_score);
+            scoreO.setText(score);
+        }
+
+        if(bb.equals("2131099751") && ee.equals("2131099751") && hh.equals("2131099751")){
+            //display.setText("X WON!");
+            Toast.makeText(BoardActivity.this, "X won this round!",
+                    Toast.LENGTH_LONG).show();
+            x_score = x_score + 1;
+            String score = Integer.toString(x_score);
+            scoreX.setText(score);
+        }
+
+        if(bb.equals("2131099747") && ee.equals("2131099747") && hh.equals("2131099747")){
+            //display.setText("O WON!");
+            Toast.makeText(BoardActivity.this, "O won this round!",
+                    Toast.LENGTH_LONG).show();
+            o_score = o_score + 1;
+            String score = Integer.toString(o_score);
+            scoreO.setText(score);
+        }
+
+        if(cc.equals("2131099751") && ff.equals("2131099751") && ii.equals("2131099751")){
+            //display.setText("X WON!");
+            Toast.makeText(BoardActivity.this, "X won this round!",
+                    Toast.LENGTH_LONG).show();
+            x_score = x_score + 1;
+            String score = Integer.toString(x_score);
+            scoreX.setText(score);
+        }
+
+        if(cc.equals("2131099747") && ff.equals("2131099747") && ii.equals("2131099747")){
+            //display.setText("O WON!");
+            Toast.makeText(BoardActivity.this, "O won this round!",
+                    Toast.LENGTH_LONG).show();
+            o_score = o_score + 1;
+            String score = Integer.toString(o_score);
+            scoreO.setText(score);
+        }
+
+        if(aa.equals("2131099751") && ee.equals("2131099751") && ii.equals("2131099751")){
+            //display.setText("X WON!");
+            Toast.makeText(BoardActivity.this, "X won this round!",
+                    Toast.LENGTH_LONG).show();
+            x_score = x_score + 1;
+            String score = Integer.toString(x_score);
+            scoreX.setText(score);
+        }
+
+        if(aa.equals("2131099747") && ee.equals("2131099747") && ii.equals("2131099747")){
+            //display.setText("O WON!");
+            Toast.makeText(BoardActivity.this, "O won this round!",
+                    Toast.LENGTH_LONG).show();
+            o_score = o_score + 1;
+            String score = Integer.toString(o_score);
+            scoreO.setText(score);
+        }
+
+        if(cc.equals("2131099751") && ee.equals("2131099751") && gg.equals("2131099751")){
+            //display.setText("X WON!");
+            Toast.makeText(BoardActivity.this, "X won this round!",
+                    Toast.LENGTH_LONG).show();
+            x_score = x_score + 1;
+            String score = Integer.toString(x_score);
+            scoreX.setText(score);
+        }
+
+        if(cc.equals("2131099747") && ee.equals("2131099747") && gg.equals("2131099747")){
+            //display.setText("O WON!");
+            Toast.makeText(BoardActivity.this, "O won this round!",
+                    Toast.LENGTH_LONG).show();
+            o_score = o_score + 1;
+            String score = Integer.toString(o_score);
+            scoreO.setText(score);
+        }
     }
 
 }
