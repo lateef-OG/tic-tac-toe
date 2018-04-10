@@ -19,7 +19,8 @@
         <activity android:name=".AboutActivity" />
         <activity android:name=".BoardActivity" />
         <activity android:name=".ChooseActivity" />
-        <activity android:name=".PlayerActivity"></activity>
+        <activity android:name=".PlayerActivity" />
+        <activity android:name=".TwoPlayersActivity"></activity>
     </application>
 
 </manifest>

@@ -17,4 +17,9 @@ public class PlayerActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ChooseActivity.class);
         startActivity(intent);
     }
+
+    public void twoPlayers(View view){
+        Intent intent = new Intent(this, TwoPlayersActivity.class);
+        startActivity(intent);
+    }
 }
