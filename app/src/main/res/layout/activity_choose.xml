@@ -7,14 +7,14 @@
     android:layout_height="match_parent"
     tools:context=".ChooseActivity"
     android:orientation="vertical"
-    android:background="#0D374F"
+    android:background="@color/bg_color"
     android:padding="24dp">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/choose"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/white"
         android:textSize="20sp"
         android:gravity="center"/>
 
@@ -44,7 +44,7 @@
                 android:layout_height="wrap_content"
                 android:text="OR"
                 android:textSize="20sp"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white"
                 android:layout_marginRight="15dp"/>
 
             <ImageView
@@ -57,7 +57,5 @@
         </LinearLayout>
 
     </LinearLayout>
-
-
 
 </LinearLayout>

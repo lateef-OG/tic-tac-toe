@@ -12,7 +12,7 @@ import java.util.List;
 
 public class TwoPlayersActivity extends AppCompatActivity {
 
-    public String character = ChooseActivity.character;
+    public String character = "x";
 
     ImageView i1, i2, i3, i4, i5, i6, i7, i8, i9;
 
@@ -63,42 +63,14 @@ public class TwoPlayersActivity extends AppCompatActivity {
             public void onClick(View v){
                 if(i1.getDrawable() == null) {
                     if (character.equals("x")) {
+                        character = "o";
                         i1.setTag(R.drawable.x);
                         i1.setImageResource(R.drawable.x);
 
-                        ImageView box;
-
-                        for (int i = 0; i < 18; i++) {
-                            int position = (int) (Math.random() * 8);
-                            if (position == 0) {
-                                position = position + 1;
-                            }
-                            box = board.get(position);
-                            if (box.getDrawable() == null) {
-                                box.setTag(R.drawable.o);
-                                box.setImageResource(R.drawable.o);
-                                break;
-                            }
-                        }
-
                     } else {
+                        character = "x";
                         i1.setTag(R.drawable.o);
                         i1.setImageResource(R.drawable.o);
-
-                        ImageView box;
-
-                        for (int i = 0; i < 18; i++) {
-                            int position = (int) (Math.random() * 8);
-                            if (position == 0) {
-                                position = position + 1;
-                            }
-                            box = board.get(position);
-                            if (box.getDrawable() == null) {
-                                box.setTag(R.drawable.x);
-                                box.setImageResource(R.drawable.x);
-                                break;
-                            }
-                        }
                     }
                     click = click + 1;
                     end();
@@ -112,41 +84,13 @@ public class TwoPlayersActivity extends AppCompatActivity {
             public void onClick(View v){
                 if(i2.getDrawable() == null) {
                     if (character.equals("x")) {
+                        character = "o";
                         i2.setTag(R.drawable.x);
                         i2.setImageResource(R.drawable.x);
-
-                        ImageView box;
-
-                        for (int i = 0; i < 18; i++) {
-                            int position = (int) (Math.random() * 8);
-                            if (position == 1) {
-                                position = position + 1;
-                            }
-                            box = board.get(position);
-                            if (box.getDrawable() == null) {
-                                box.setTag(R.drawable.o);
-                                box.setImageResource(R.drawable.o);
-                                break;
-                            }
-                        }
                     } else {
+                        character = "x";
                         i2.setTag(R.drawable.o);
                         i2.setImageResource(R.drawable.o);
-
-                        ImageView box;
-
-                        for (int i = 0; i < 18; i++) {
-                            int position = (int) (Math.random() * 8);
-                            if (position == 1) {
-                                position = position + 1;
-                            }
-                            box = board.get(position);
-                            if (box.getDrawable() == null) {
-                                box.setTag(R.drawable.x);
-                                box.setImageResource(R.drawable.x);
-                                break;
-                            }
-                        }
                     }
                     click = click + 1;
                     end();
@@ -159,41 +103,15 @@ public class TwoPlayersActivity extends AppCompatActivity {
             public void onClick(View v){
                 if(i3.getDrawable() == null) {
                     if (character.equals("x")) {
+                        character = "o";
                         i3.setTag(R.drawable.x);
                         i3.setImageResource(R.drawable.x);
 
-                        ImageView box;
-
-                        for (int i = 0; i < 18; i++) {
-                            int position = (int) (Math.random() * 8);
-                            if (position == 2) {
-                                position = position + 1;
-                            }
-                            box = board.get(position);
-                            if (box.getDrawable() == null) {
-                                box.setTag(R.drawable.o);
-                                box.setImageResource(R.drawable.o);
-                                break;
-                            }
-                        }
                     } else {
+                        character = "x";
                         i3.setTag(R.drawable.o);
                         i3.setImageResource(R.drawable.o);
 
-                        ImageView box;
-
-                        for (int i = 0; i < 18; i++) {
-                            int position = (int) (Math.random() * 8);
-                            if (position == 2) {
-                                position = position + 1;
-                            }
-                            box = board.get(position);
-                            if (box.getDrawable() == null) {
-                                box.setTag(R.drawable.x);
-                                box.setImageResource(R.drawable.x);
-                                break;
-                            }
-                        }
                     }
                     click = click + 1;
                     end();
@@ -206,41 +124,15 @@ public class TwoPlayersActivity extends AppCompatActivity {
             public void onClick(View v){
                 if(i4.getDrawable() == null) {
                     if (character.equals("x")) {
+                        character = "o";
                         i4.setTag(R.drawable.x);
                         i4.setImageResource(R.drawable.x);
 
-                        ImageView box;
-
-                        for (int i = 0; i < 18; i++) {
-                            int position = (int) (Math.random() * 8);
-                            if (position == 3) {
-                                position = position + 1;
-                            }
-                            box = board.get(position);
-                            if (box.getDrawable() == null) {
-                                box.setTag(R.drawable.o);
-                                box.setImageResource(R.drawable.o);
-                                break;
-                            }
-                        }
                     } else {
+                        character = "x";
                         i4.setTag(R.drawable.o);
                         i4.setImageResource(R.drawable.o);
 
-                        ImageView box;
-
-                        for (int i = 0; i < 18; i++) {
-                            int position = (int) (Math.random() * 8);
-                            if (position == 3) {
-                                position = position + 1;
-                            }
-                            box = board.get(position);
-                            if (box.getDrawable() == null) {
-                                box.setTag(R.drawable.x);
-                                box.setImageResource(R.drawable.x);
-                                break;
-                            }
-                        }
                     }
                     click = click + 1;
                     end();
@@ -253,41 +145,15 @@ public class TwoPlayersActivity extends AppCompatActivity {
             public void onClick(View v){
                 if(i5.getDrawable() == null) {
                     if (character.equals("x")) {
+                        character = "o";
                         i5.setTag(R.drawable.x);
                         i5.setImageResource(R.drawable.x);
 
-                        ImageView box;
-
-                        for (int i = 0; i < 18; i++) {
-                            int position = (int) (Math.random() * 8);
-                            if (position == 4) {
-                                position = position + 1;
-                            }
-                            box = board.get(position);
-                            if (box.getDrawable() == null) {
-                                box.setTag(R.drawable.o);
-                                box.setImageResource(R.drawable.o);
-                                break;
-                            }
-                        }
                     } else {
+                        character = "x";
                         i5.setTag(R.drawable.o);
                         i5.setImageResource(R.drawable.o);
 
-                        ImageView box;
-
-                        for (int i = 0; i < 18; i++) {
-                            int position = (int) (Math.random() * 8);
-                            if (position == 4) {
-                                position = position + 1;
-                            }
-                            box = board.get(position);
-                            if (box.getDrawable() == null) {
-                                box.setTag(R.drawable.x);
-                                box.setImageResource(R.drawable.x);
-                                break;
-                            }
-                        }
                     }
                     click = click + 1;
                     end();
@@ -300,41 +166,15 @@ public class TwoPlayersActivity extends AppCompatActivity {
             public void onClick(View v){
                 if(i6.getDrawable() == null) {
                     if (character.equals("x")) {
+                        character = "o";
                         i6.setTag(R.drawable.x);
                         i6.setImageResource(R.drawable.x);
 
-                        ImageView box;
-
-                        for (int i = 0; i < 18; i++) {
-                            int position = (int) (Math.random() * 8);
-                            if (position == 5) {
-                                position = position + 1;
-                            }
-                            box = board.get(position);
-                            if (box.getDrawable() == null) {
-                                box.setTag(R.drawable.o);
-                                box.setImageResource(R.drawable.o);
-                                break;
-                            }
-                        }
                     } else {
+                        character = "x";
                         i6.setTag(R.drawable.o);
                         i6.setImageResource(R.drawable.o);
 
-                        ImageView box;
-
-                        for (int i = 0; i < 18; i++) {
-                            int position = (int) (Math.random() * 8);
-                            if (position == 5) {
-                                position = position + 1;
-                            }
-                            box = board.get(position);
-                            if (box.getDrawable() == null) {
-                                box.setTag(R.drawable.x);
-                                box.setImageResource(R.drawable.x);
-                                break;
-                            }
-                        }
                     }
                     click = click + 1;
                     end();
@@ -347,41 +187,15 @@ public class TwoPlayersActivity extends AppCompatActivity {
             public void onClick(View v){
                 if(i7.getDrawable() == null) {
                     if (character.equals("x")) {
+                        character = "o";
                         i7.setTag(R.drawable.x);
                         i7.setImageResource(R.drawable.x);
 
-                        ImageView box;
-
-                        for (int i = 0; i < 18; i++) {
-                            int position = (int) (Math.random() * 8);
-                            if (position == 6) {
-                                position = position + 1;
-                            }
-                            box = board.get(position);
-                            if (box.getDrawable() == null) {
-                                box.setTag(R.drawable.o);
-                                box.setImageResource(R.drawable.o);
-                                break;
-                            }
-                        }
                     } else {
+                        character = "x";
                         i7.setTag(R.drawable.o);
                         i7.setImageResource(R.drawable.o);
 
-                        ImageView box;
-
-                        for (int i = 0; i < 18; i++) {
-                            int position = (int) (Math.random() * 8);
-                            if (position == 6) {
-                                position = position + 1;
-                            }
-                            box = board.get(position);
-                            if (box.getDrawable() == null) {
-                                box.setTag(R.drawable.x);
-                                box.setImageResource(R.drawable.x);
-                                break;
-                            }
-                        }
                     }
                     click = click + 1;
                     end();
@@ -394,41 +208,15 @@ public class TwoPlayersActivity extends AppCompatActivity {
             public void onClick(View v){
                 if(i8.getDrawable() == null) {
                     if (character.equals("x")) {
+                        character = "o";
                         i8.setTag(R.drawable.x);
                         i8.setImageResource(R.drawable.x);
 
-                        ImageView box;
-
-                        for (int i = 0; i < 18; i++) {
-                            int position = (int) (Math.random() * 8);
-                            if (position == 7) {
-                                position = position + 1;
-                            }
-                            box = board.get(position);
-                            if (box.getDrawable() == null) {
-                                box.setTag(R.drawable.o);
-                                box.setImageResource(R.drawable.o);;
-                                break;
-                            }
-                        }
                     } else {
+                        character = "x";
                         i8.setTag(R.drawable.o);
                         i8.setImageResource(R.drawable.o);
 
-                        ImageView box;
-
-                        for (int i = 0; i < 18; i++) {
-                            int position = (int) (Math.random() * 8);
-                            if (position == 7) {
-                                position = position + 1;
-                            }
-                            box = board.get(position);
-                            if (box.getDrawable() == null) {
-                                box.setTag(R.drawable.x);
-                                box.setImageResource(R.drawable.x);
-                                break;
-                            }
-                        }
                     }
                     click = click + 1;
                     end();
@@ -441,41 +229,15 @@ public class TwoPlayersActivity extends AppCompatActivity {
             public void onClick(View v){
                 if(i9.getDrawable() == null) {
                     if (character.equals("x")) {
+                        character = "o";
                         i9.setTag(R.drawable.x);
                         i9.setImageResource(R.drawable.x);
 
-                        ImageView box;
-
-                        for (int i = 0; i < 18; i++) {
-                            int position = (int) (Math.random() * 8);
-                            if (position == 8) {
-                                position = position - 1;
-                            }
-                            box = board.get(position);
-                            if (box.getDrawable() == null) {
-                                box.setTag(R.drawable.o);
-                                box.setImageResource(R.drawable.o);
-                                break;
-                            }
-                        }
                     } else {
+                        character = "x";
                         i9.setTag(R.drawable.o);
                         i9.setImageResource(R.drawable.o);
 
-                        ImageView box;
-
-                        for (int i = 0; i < 18; i++) {
-                            int position = (int) (Math.random() * 8);
-                            if (position == 8) {
-                                position = position - 1;
-                            }
-                            box = board.get(position);
-                            if (box.getDrawable() == null) {
-                                box.setTag(R.drawable.x);
-                                box.setImageResource(R.drawable.x);
-                                break;
-                            }
-                        }
                     }
                     click = click + 1;
                     end();
@@ -576,6 +338,11 @@ public class TwoPlayersActivity extends AppCompatActivity {
             winO();
             disableBoard();
         }
+
+        if(click == 9){
+            displayDraw();
+//            click = 0;
+        }
     }
 
     public void winX(){
@@ -595,6 +362,11 @@ public class TwoPlayersActivity extends AppCompatActivity {
         disableBoard();
     }
 
+    public void displayDraw(){
+        Toast.makeText(TwoPlayersActivity.this, "Draw!",
+                Toast.LENGTH_LONG).show();
+    }
+
     public void resetBoard(View view){
         for(int i = 0; i < 9; i++){
             ImageView box = board.get(i);
@@ -602,6 +374,8 @@ public class TwoPlayersActivity extends AppCompatActivity {
             box.setTag(null);
             box.setEnabled(true);
         }
+        click = 0;
+        character = "x";
     }
 
     public void disableBoard(){
