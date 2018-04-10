@@ -504,6 +504,7 @@ public class BoardActivity extends AppCompatActivity {
             x_score = x_score + 1;
             String score = Integer.toString(x_score);
             scoreX.setText(score);
+            disableBoard();
         }
 
         if(aa.equals("2131099747") && bb.equals("2131099747") && cc.equals("2131099747")){
@@ -513,6 +514,7 @@ public class BoardActivity extends AppCompatActivity {
             o_score = o_score + 1;
             String score = Integer.toString(o_score);
             scoreO.setText(score);
+            disableBoard();
         }
 
         if(dd.equals("2131099751") && ee.equals("2131099751") && ff.equals("2131099751")){
@@ -522,6 +524,7 @@ public class BoardActivity extends AppCompatActivity {
             x_score = x_score + 1;
             String score = Integer.toString(x_score);
             scoreX.setText(score);
+            disableBoard();
         }
 
         if(dd.equals("2131099747") && ee.equals("2131099747") && ff.equals("2131099747")){
@@ -531,6 +534,7 @@ public class BoardActivity extends AppCompatActivity {
             o_score = o_score + 1;
             String score = Integer.toString(o_score);
             scoreO.setText(score);
+            disableBoard();
         }
 
         if(gg.equals("2131099751") && hh.equals("2131099751") && ii.equals("2131099751")){
@@ -540,6 +544,7 @@ public class BoardActivity extends AppCompatActivity {
             x_score = x_score + 1;
             String score = Integer.toString(x_score);
             scoreX.setText(score);
+            disableBoard();
         }
 
         if(gg.equals("2131099747") && hh.equals("2131099747") && ii.equals("2131099747")){
@@ -549,6 +554,7 @@ public class BoardActivity extends AppCompatActivity {
             o_score = o_score + 1;
             String score = Integer.toString(o_score);
             scoreO.setText(score);
+            disableBoard();
         }
 
         if(aa.equals("2131099751") && dd.equals("2131099751") && gg.equals("2131099751")){
@@ -558,6 +564,7 @@ public class BoardActivity extends AppCompatActivity {
             x_score = x_score + 1;
             String score = Integer.toString(x_score);
             scoreX.setText(score);
+            disableBoard();
         }
 
         if(aa.equals("2131099747") && dd.equals("2131099747") && gg.equals("2131099747")){
@@ -567,6 +574,7 @@ public class BoardActivity extends AppCompatActivity {
             o_score = o_score + 1;
             String score = Integer.toString(o_score);
             scoreO.setText(score);
+            disableBoard();
         }
 
         if(bb.equals("2131099751") && ee.equals("2131099751") && hh.equals("2131099751")){
@@ -576,6 +584,7 @@ public class BoardActivity extends AppCompatActivity {
             x_score = x_score + 1;
             String score = Integer.toString(x_score);
             scoreX.setText(score);
+            disableBoard();
         }
 
         if(bb.equals("2131099747") && ee.equals("2131099747") && hh.equals("2131099747")){
@@ -585,6 +594,7 @@ public class BoardActivity extends AppCompatActivity {
             o_score = o_score + 1;
             String score = Integer.toString(o_score);
             scoreO.setText(score);
+            disableBoard();
         }
 
         if(cc.equals("2131099751") && ff.equals("2131099751") && ii.equals("2131099751")){
@@ -594,6 +604,7 @@ public class BoardActivity extends AppCompatActivity {
             x_score = x_score + 1;
             String score = Integer.toString(x_score);
             scoreX.setText(score);
+            disableBoard();
         }
 
         if(cc.equals("2131099747") && ff.equals("2131099747") && ii.equals("2131099747")){
@@ -603,6 +614,7 @@ public class BoardActivity extends AppCompatActivity {
             o_score = o_score + 1;
             String score = Integer.toString(o_score);
             scoreO.setText(score);
+            disableBoard();
         }
 
         if(aa.equals("2131099751") && ee.equals("2131099751") && ii.equals("2131099751")){
@@ -612,6 +624,7 @@ public class BoardActivity extends AppCompatActivity {
             x_score = x_score + 1;
             String score = Integer.toString(x_score);
             scoreX.setText(score);
+            disableBoard();
         }
 
         if(aa.equals("2131099747") && ee.equals("2131099747") && ii.equals("2131099747")){
@@ -621,6 +634,7 @@ public class BoardActivity extends AppCompatActivity {
             o_score = o_score + 1;
             String score = Integer.toString(o_score);
             scoreO.setText(score);
+            disableBoard();
         }
 
         if(cc.equals("2131099751") && ee.equals("2131099751") && gg.equals("2131099751")){
@@ -630,6 +644,7 @@ public class BoardActivity extends AppCompatActivity {
             x_score = x_score + 1;
             String score = Integer.toString(x_score);
             scoreX.setText(score);
+            disableBoard();
         }
 
         if(cc.equals("2131099747") && ee.equals("2131099747") && gg.equals("2131099747")){
@@ -639,6 +654,7 @@ public class BoardActivity extends AppCompatActivity {
             o_score = o_score + 1;
             String score = Integer.toString(o_score);
             scoreO.setText(score);
+            disableBoard();
         }
     }
 
@@ -647,6 +663,14 @@ public class BoardActivity extends AppCompatActivity {
             ImageView box = board.get(i);
             box.setImageDrawable(null);
             box.setTag(null);
+            box.setEnabled(true);
+        }
+    }
+
+    public void disableBoard(){
+        for(int i = 0; i < 9; i++){
+            ImageView box = board.get(i);
+            box.setEnabled(false);
         }
     }
 

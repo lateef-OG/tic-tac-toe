@@ -4,4 +4,5 @@
     <string name="instructions">How To Play</string>
     <string name="instructions_text"></string>
     <string name="choose"> Which do you want to be, X or O. Tap on your choice</string>
+    <string name="game_type">Please select a game type</string>
 </resources>

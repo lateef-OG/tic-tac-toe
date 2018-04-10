@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void choose(View view){
-        Intent intent = new Intent(this, ChooseActivity.class);
+        Intent intent = new Intent(this, PlayerActivity.class);
         startActivity(intent);
     }
 }
