@@ -35,18 +35,18 @@ public class BoardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_board);
 
-        scoreX = (TextView) findViewById(R.id.score_x);
-        scoreO = (TextView) findViewById(R.id.score_0);
+        scoreX = findViewById(R.id.score_x);
+        scoreO = findViewById(R.id.score_0);
 
-        i1 = (ImageView) findViewById(R.id.box_1);
-        i2 = (ImageView) findViewById(R.id.box_2);
-        i3 = (ImageView) findViewById(R.id.box_3);
-        i4 = (ImageView) findViewById(R.id.box_4);
-        i5 = (ImageView) findViewById(R.id.box_5);
-        i6 = (ImageView) findViewById(R.id.box_6);
-        i7 = (ImageView) findViewById(R.id.box_7);
-        i8 = (ImageView) findViewById(R.id.box_8);
-        i9 = (ImageView) findViewById(R.id.box_9);
+        i1 = findViewById(R.id.box_1);
+        i2 = findViewById(R.id.box_2);
+        i3 = findViewById(R.id.box_3);
+        i4 = findViewById(R.id.box_4);
+        i5 = findViewById(R.id.box_5);
+        i6 = findViewById(R.id.box_6);
+        i7 = findViewById(R.id.box_7);
+        i8 = findViewById(R.id.box_8);
+        i9 = findViewById(R.id.box_9);
 
         board.add(i1);
         board.add(i2);
@@ -484,7 +484,7 @@ public class BoardActivity extends AppCompatActivity {
         });
     }
 
-    public void end(){
+    public boolean end(){
         aa = String.valueOf(i1.getTag());
         bb = String.valueOf(i2.getTag());
         cc = String.valueOf(i3.getTag());
@@ -498,164 +498,119 @@ public class BoardActivity extends AppCompatActivity {
         ii = String.valueOf(i9.getTag());
 
         if(aa.equals("2131099751") && bb.equals("2131099751") && cc.equals("2131099751")){
-//            display.setText("X WON!");
-            Toast.makeText(BoardActivity.this, "X won this round!",
-                    Toast.LENGTH_LONG).show();
-            x_score = x_score + 1;
-            String score = Integer.toString(x_score);
-            scoreX.setText(score);
+            winX();
             disableBoard();
+            return true;
         }
 
         if(aa.equals("2131099747") && bb.equals("2131099747") && cc.equals("2131099747")){
-            //display.setText("O WON!");
-            Toast.makeText(BoardActivity.this, "O won this round!",
-                    Toast.LENGTH_LONG).show();
-            o_score = o_score + 1;
-            String score = Integer.toString(o_score);
-            scoreO.setText(score);
+            winO();
             disableBoard();
+            return true;
         }
 
         if(dd.equals("2131099751") && ee.equals("2131099751") && ff.equals("2131099751")){
-//            display.setText("X WON!");
-            Toast.makeText(BoardActivity.this, "X won this round!",
-                    Toast.LENGTH_LONG).show();
-            x_score = x_score + 1;
-            String score = Integer.toString(x_score);
-            scoreX.setText(score);
+            winX();
             disableBoard();
+            return true;
         }
 
         if(dd.equals("2131099747") && ee.equals("2131099747") && ff.equals("2131099747")){
-//            display.setText("O WON!");
-            Toast.makeText(BoardActivity.this, "O won this round!",
-                    Toast.LENGTH_LONG).show();
-            o_score = o_score + 1;
-            String score = Integer.toString(o_score);
-            scoreO.setText(score);
+            winO();
             disableBoard();
+            return true;
         }
 
         if(gg.equals("2131099751") && hh.equals("2131099751") && ii.equals("2131099751")){
-            //display.setText("X WON!");
-            Toast.makeText(BoardActivity.this, "X won this round!",
-                    Toast.LENGTH_LONG).show();
-            x_score = x_score + 1;
-            String score = Integer.toString(x_score);
-            scoreX.setText(score);
+            winX();
             disableBoard();
+            return true;
         }
 
         if(gg.equals("2131099747") && hh.equals("2131099747") && ii.equals("2131099747")){
-            //display.setText("O WON!");
-            Toast.makeText(BoardActivity.this, "O won this round!",
-                    Toast.LENGTH_LONG).show();
-            o_score = o_score + 1;
-            String score = Integer.toString(o_score);
-            scoreO.setText(score);
+            winO();
             disableBoard();
+            return true;
         }
 
         if(aa.equals("2131099751") && dd.equals("2131099751") && gg.equals("2131099751")){
-            //display.setText("X WON!");
-            Toast.makeText(BoardActivity.this, "X won this round!",
-                    Toast.LENGTH_LONG).show();
-            x_score = x_score + 1;
-            String score = Integer.toString(x_score);
-            scoreX.setText(score);
+            winX();
             disableBoard();
+            return true;
         }
 
         if(aa.equals("2131099747") && dd.equals("2131099747") && gg.equals("2131099747")){
-            //display.setText("O WON!");
-            Toast.makeText(BoardActivity.this, "O won this round!",
-                    Toast.LENGTH_LONG).show();
-            o_score = o_score + 1;
-            String score = Integer.toString(o_score);
-            scoreO.setText(score);
+            winO();
             disableBoard();
+            return true;
         }
 
         if(bb.equals("2131099751") && ee.equals("2131099751") && hh.equals("2131099751")){
-            //display.setText("X WON!");
-            Toast.makeText(BoardActivity.this, "X won this round!",
-                    Toast.LENGTH_LONG).show();
-            x_score = x_score + 1;
-            String score = Integer.toString(x_score);
-            scoreX.setText(score);
+            winX();
             disableBoard();
+            return true;
         }
 
         if(bb.equals("2131099747") && ee.equals("2131099747") && hh.equals("2131099747")){
-            //display.setText("O WON!");
-            Toast.makeText(BoardActivity.this, "O won this round!",
-                    Toast.LENGTH_LONG).show();
-            o_score = o_score + 1;
-            String score = Integer.toString(o_score);
-            scoreO.setText(score);
+            winO();
             disableBoard();
+            return true;
         }
 
         if(cc.equals("2131099751") && ff.equals("2131099751") && ii.equals("2131099751")){
-            //display.setText("X WON!");
-            Toast.makeText(BoardActivity.this, "X won this round!",
-                    Toast.LENGTH_LONG).show();
-            x_score = x_score + 1;
-            String score = Integer.toString(x_score);
-            scoreX.setText(score);
+            winX();
             disableBoard();
+            return true;
         }
 
         if(cc.equals("2131099747") && ff.equals("2131099747") && ii.equals("2131099747")){
-            //display.setText("O WON!");
-            Toast.makeText(BoardActivity.this, "O won this round!",
-                    Toast.LENGTH_LONG).show();
-            o_score = o_score + 1;
-            String score = Integer.toString(o_score);
-            scoreO.setText(score);
+            winO();
             disableBoard();
+            return true;
         }
 
         if(aa.equals("2131099751") && ee.equals("2131099751") && ii.equals("2131099751")){
-            //display.setText("X WON!");
-            Toast.makeText(BoardActivity.this, "X won this round!",
-                    Toast.LENGTH_LONG).show();
-            x_score = x_score + 1;
-            String score = Integer.toString(x_score);
-            scoreX.setText(score);
+            winX();
             disableBoard();
+            return true;
         }
 
         if(aa.equals("2131099747") && ee.equals("2131099747") && ii.equals("2131099747")){
-            //display.setText("O WON!");
-            Toast.makeText(BoardActivity.this, "O won this round!",
-                    Toast.LENGTH_LONG).show();
-            o_score = o_score + 1;
-            String score = Integer.toString(o_score);
-            scoreO.setText(score);
+            winO();
             disableBoard();
+            return true;
         }
 
         if(cc.equals("2131099751") && ee.equals("2131099751") && gg.equals("2131099751")){
-            //display.setText("X WON!");
-            Toast.makeText(BoardActivity.this, "X won this round!",
-                    Toast.LENGTH_LONG).show();
-            x_score = x_score + 1;
-            String score = Integer.toString(x_score);
-            scoreX.setText(score);
+            winX();
             disableBoard();
+            return true;
         }
 
         if(cc.equals("2131099747") && ee.equals("2131099747") && gg.equals("2131099747")){
-            //display.setText("O WON!");
-            Toast.makeText(BoardActivity.this, "O won this round!",
-                    Toast.LENGTH_LONG).show();
-            o_score = o_score + 1;
-            String score = Integer.toString(o_score);
-            scoreO.setText(score);
+            winO();
             disableBoard();
+            return true;
         }
+
+        return false;
+    }
+
+    public void winX(){
+        Toast.makeText(BoardActivity.this, "X won this round!",
+                Toast.LENGTH_LONG).show();
+        x_score = x_score + 1;
+        String score = Integer.toString(x_score);
+        scoreX.setText(score);
+    }
+
+    public void winO(){
+        Toast.makeText(BoardActivity.this, "O won this round!",
+                Toast.LENGTH_LONG).show();
+        o_score = o_score + 1;
+        String score = Integer.toString(o_score);
+        scoreO.setText(score);
+        disableBoard();
     }
 
     public void resetBoard(View view){
